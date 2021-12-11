@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
-import Dropdown from "../components/Dropdown";
 
 export const EditExercisePage = ({ exerciseToEdit }) => {
     const [name, setName] = useState(exerciseToEdit.name);
