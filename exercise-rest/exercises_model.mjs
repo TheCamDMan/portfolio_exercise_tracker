@@ -1,7 +1,7 @@
 // Get the mongoose object
 import mongoose from 'mongoose';
 
-// Prepare to the database movies_db in the MongoDB server running locally on port 27017
+// Prepare to the database exercises_db in the MongoDB server running locally on port 27017
 mongoose.connect(
     'mongodb://localhost:27017/exercises_db',
     { useNewUrlParser: true }
@@ -16,7 +16,7 @@ db.once('open', () => {
 });
 
 /**
- * Define the schema
+ * Define the schema for the exercise document
  */
 const exerciseSchema = mongoose.Schema({
     name: { type: String, required: true },
@@ -78,7 +78,11 @@ const replaceExercise = async (_id, name, reps, weight, unit, date) => {
     return result.nModified;
 }
 
-
+/**
+ * Deletes the exercise from the db using _id.
+ * @param {Number} _id 
+ * @returns 
+ */
 const deleteById = async (_id) => {
     const result = await Exercise.deleteOne({ _id: _id });
     return result.deletedCount;

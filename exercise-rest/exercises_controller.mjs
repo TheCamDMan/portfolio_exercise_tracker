@@ -1,9 +1,13 @@
 import * as exercises from './exercises_model.mjs';
 import express from 'express';
+
+// store express API as app
 const app = express();
 
+// set port
 const PORT = 3000;
 
+// middleware function to interpret json objects
 app.use(express.json());
 
 /**
