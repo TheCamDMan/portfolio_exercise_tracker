@@ -34,6 +34,7 @@ To delete an entry, press the trashcan icon in the row of the entry.
 2.  Open terminal at exercise-rest directory
 3.  enter "npm start" in the terminal
 4.  Open separate terminal at exercise-ui directory
+6.  enter "npm install" in the terminal to install required dependencies
 5.  enter "npm start" in the terminal
 6.  Open a web browser and navigate to "http://localhost:8000"
 
